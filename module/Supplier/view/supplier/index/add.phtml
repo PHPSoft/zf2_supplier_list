@@ -1,0 +1,25 @@
+<h1>Add Supplier details</h1>
+
+<?php
+
+/** @var $form \Supplier\Form\Add */
+$form = $this->form;
+$form->prepare();
+echo $this->form()->openTag($form);
+
+?>
+
+<div class="form-group">
+    <?php echo $this->formRow($form->get('name')); ?>
+</div>
+
+<div class="form-group">
+    <?php echo $this->formRow($form->get('address_line_1')); ?>
+</div>
+
+<div class="form-group">
+    <?php echo $this->formRow($form->get('town')); ?>
+</div>
+
+<?php echo $this->formSubmit($form->get('submit')); ?>
+<?php echo $this->form()->closeTag(); ?>
